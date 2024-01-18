@@ -1,0 +1,57 @@
+@import '../../../../styles.scss';
+
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__article{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        width: 70%;
+        align-items: center;
+        border-radius: 10px;
+        background-color: $bg-detail-color-RR;
+    }
+    &__title{
+        margin:10px;
+        width: 100%;
+        font-family: $font-Atma;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.2rem;
+        color: $font-color-RR;
+    }
+    &__date{
+        width: 100%;
+        font-family: $font-Atma;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__description{
+        margin:10px;
+        width: 80%;
+        font-family: $font-Atma;
+        font-weight: 400;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+}

@@ -1,0 +1,15 @@
+<div class="post">
+  <h1 class="post__title">Lista de noticias</h1>
+  <button
+  class="post__btn"
+  mat-raised-button
+  color="primary"
+  (click)="createPost()">+ Noticias</button>
+  <app-postcard
+    *ngFor="let post of posts"
+    class="post__card"
+    [showButtons]="true"
+    [title]="post.title"
+    [publication_date]="post.publication_date"
+    [Id]="post.id"></app-postcard>
+</div>

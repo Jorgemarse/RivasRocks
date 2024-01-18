@@ -1,0 +1,28 @@
+@import '../../../../styles.scss';
+
+.table {
+  width: 60%;
+  &__list{
+    width: 70%;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    background-color: $bg-color-RR;
+  }
+  &__title{
+    text-align: center;
+    font-family: $font-Atma;
+    font-weight: 700;
+    color:$font-color-RR;
+  }
+  &__header{
+    font-family: $font-Atma;
+    font-weight: 700;
+    color:$font-color-RR;
+    background-color: rgb(155, 179, 155);
+  }
+  @media (min-width: 750px) {
+    width: 96%;
+    margin: 1rem auto;
+  }
+}

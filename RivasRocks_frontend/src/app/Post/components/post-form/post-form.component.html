@@ -1,0 +1,95 @@
+<div class="post">
+  <div class="post__overlay" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+  <h1 class="post__title">Nueva Noticia</h1>
+  <mat-card class="mat-elevation-z4 post__card">
+    <form
+      class="post__form"
+      *ngIf="postForm"
+      [formGroup]="postForm"
+      (ngSubmit)="savePost()"
+    >
+      <section>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label class="post__label">Title: </mat-label>
+          <input matInput type="text" [formControl]="title" required />
+          <mat-error *ngIf="title.hasError('required')">
+            Title is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="title.hasError('maxlength')">
+            Title can be max 55 characters long.
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label class="post__label">Breve descripción: </mat-label>
+          <textarea
+            class="post__textarea__small"
+            matInput
+            type="text"
+            [formControl]="small_description"
+            required
+          ></textarea>
+          <mat-error *ngIf="description.hasError('required')">
+            Description is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="description.hasError('maxlength')">
+            Description can be max 255 characters long.
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label class="post__label">Description: </mat-label>
+          <textarea
+            class="post__textarea"
+            matInput
+            type="text"
+            [formControl]="description"
+            required
+          ></textarea>
+          <mat-error *ngIf="description.hasError('required')">
+            Description is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="description.hasError('maxlength')">
+            Description can be max 255 characters long.
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label class="post__label">Publication date: </mat-label>
+          <input
+            matInput
+            [formControl]="publication_date"
+            [matDatepicker]="picker"
+            required
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="description.hasError('required')">
+            Publication date is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </section>
+    
+
+      <section>
+        <button
+          class="post__btn"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!postForm.valid"
+        >
+          Guardar
+        </button>
+      </section>
+    </form>
+  </mat-card>
+</div>

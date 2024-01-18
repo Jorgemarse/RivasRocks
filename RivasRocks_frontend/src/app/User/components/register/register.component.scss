@@ -1,0 +1,66 @@
+@import '../../../../styles.scss';
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+
+  &__title{
+    text-align: center;
+    font-family: $font-Atma;
+    font-weight: 700;
+    color:$font-color-RR;
+  }
+
+  &__form {
+    min-width: 300px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__label{
+    font-family: $font-Atma;
+    font-weight: 200;
+    color:$font-color-RR;
+  }
+  &__card{
+    padding:10px;
+    background-color: $bg-color-RR;
+  }
+  &__btn {
+    margin-top: 1rem;
+    font-family: $font-Atma;
+    font-weight: 700;
+    background-color: $button-color !important;
+  }
+  &__inputs {
+    margin: 1rem;
+  }
+  //Spinner
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+mat-spinner {
+  width: 50px;
+  height: 50px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+  mat-form-field {
+    width: 100%;
+  }

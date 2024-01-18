@@ -1,0 +1,27 @@
+<div class="home">
+  <h1 class="home__title" id="Activities">Actividades</h1>
+  <div class="home__grid">
+    <app-activitygrid
+        *ngFor="let activity of activities"
+        [@listAnimation]="activities.length"
+        class="activity__card"
+        [Id]="activity.id"
+        [title]="activity.title"
+        [location]="activity.location"
+        [activity_date]="activity.activity_date"
+        [small_description]="activity.small_description">
+    </app-activitygrid>
+  </div>
+  <h1 class="home__title" id="posts">Noticias</h1>
+  <div class="home__list">
+    <app-postcard
+        *ngFor="let post of posts"
+        [@listAnimation]="posts.length"
+        class="post__card"
+        [showButtons]="false"
+        [title]="post.title"
+        [publication_date]="post.publication_date"
+        [Id]="post.id">
+    </app-postcard>
+  </div>
+</div>

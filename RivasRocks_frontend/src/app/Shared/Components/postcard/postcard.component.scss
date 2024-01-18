@@ -1,0 +1,73 @@
+@import '../../../../styles.scss';
+
+.card{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(145, 173, 145);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+    }
+    &__text{
+        max-width: 50%;
+        @media screen and (max-width: 700px) {
+            max-width: 100%;
+        }
+    }
+    &__title{
+        font-family: $font-Carter;
+        width: 100%;
+        font-size: 1rem;
+        color: $font-color-RR;
+        @media screen and (max-width: 700px) {
+            font-size: medium;
+            text-align: center;
+        }
+        @media screen and (max-width: 414px) {
+            font-size: small;
+        }
+    }
+    &__date{
+        font-family: $font-Carter;
+        font-size: 0.7rem;
+        color: $font-color-RR;
+        @media screen and (max-width: 700px) {
+            font-size: medium;
+            text-align: center;
+        }
+        @media screen and (max-width: 414px) {
+            font-size: small;
+        }
+    }
+    &__btns{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+    }
+    &__btn{
+        background-color: $button-color;
+        margin:10px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-family: $font-Atma;
+        font-size: 1rem;
+        color: $font-color-RR;
+        &:hover{
+            background-color: $font-color-RR;
+            color: $bg-color-RR;
+        }
+        @media screen and (max-width: 700px) {
+            font-size: medium;
+            text-align: center;
+        }
+        @media screen and (max-width: 414px) {
+            font-size: small;
+        }
+    }
+    
+}

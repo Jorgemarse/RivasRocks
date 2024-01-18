@@ -1,0 +1,201 @@
+@import '../../../../styles.scss';
+
+
+.header {
+  display: flex;
+  background: $bg-color-RR;
+  max-height: 120px;
+  align-items: center;
+  justify-content:space-between;
+  flex-flow: row;
+  box-shadow: 0.5px 1px 5px 0px rgb(74, 90, 74);
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 999999999;
+  
+
+  @media screen and (max-width: 880px) {
+    flex-flow: row wrap;
+  }
+  &__logo {
+    height: 120px;
+    width: 130px;
+    transition: transform 0.3s ease;
+  }
+  &__logo-company{
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/images/RivasRock.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+  &__icon{
+    font-size: 20px;
+    color: $font-color-RR;
+    height: fit-content;
+  }
+  &__button{
+    background-color: transparent;
+    border-radius: 10px;
+    color: $font-color-RR;
+    border-color: $font-color-RR;
+    display: none;
+    cursor: pointer;
+    margin-right: 1em;
+    
+
+    @media screen and (max-width: 880px) {
+      display: flex;
+    }
+  }
+
+  &__nav{
+    background-color: transparent;
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+    
+
+    &__button{
+      font-family: $font-Atma;
+      font-weight: 700;
+      color: $font-color-RR;
+      font-size: 1.5em;
+      border: none;
+      background-color: transparent;
+      &:hover{
+        font-size: 1.6em;
+        text-shadow: 1px -1px 8px rgba(255,255,255,0.62);
+        cursor: pointer;
+      }
+    }
+    &__register {
+      padding: 5px;
+      border: solid 3px $font-color-RR;
+      border-radius: 5px;
+      background-color: $button-color;
+      font-family: $font-Atma;
+      font-weight: 700;
+      color: $font-color-RR;
+      font-size: 1.5em;
+      box-shadow: 0.5px 1px 5px 0px rgb(74, 90, 74);
+      
+      &:hover{
+        background-color: rgb(58, 109, 67);
+        cursor: pointer;
+        color: aliceblue;
+        box-shadow: 0.5px 1px 5px 5px rgb(222, 228, 222);
+      }
+    }
+
+    @media screen and (max-width: 880px) {
+      width: 100%;
+      height: 0vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0em;
+      overflow: hidden;
+      pointer-events: none;
+      transition: all .5s ease;
+
+
+      &--active{
+        height: 35vh;
+        background-color: rgba(133, 163, 133, 0.918);
+        pointer-events: auto;
+        z-index: 2;
+      }
+    }
+  }
+  &__svg {
+    width: 5em;
+    height: 5em;
+  }
+  &__ul{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    justify-content:space-between;
+
+    @media screen and (max-width: 880px) {
+      width: 60%;
+      flex-direction: column;
+      
+    }
+  }
+  &__login{
+    width: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+    @media screen and (max-width: 1515px) {
+      //margin-top: -1em;
+    }
+
+    @media screen and (max-width: 880px) {
+      width: 60%;
+      flex-direction: column;
+      border-top: solid 1px $font-color-RR;
+    }
+  }
+  &__login__auth{
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+    @media screen and (max-width: 980px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 880px) {
+      width: 60%;
+      flex-direction: column;
+      border-top: solid 1px $font-color-RR;
+    }
+  }
+
+
+  &__li{
+    margin: 0.5em 0.7em;
+    list-style: none;
+    color: $font-color-RR;
+    display: flex;
+    
+    
+
+    @media screen and (max-width: 880px) {
+      margin: .5em 0;
+    }
+
+  }
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+mat-spinner{
+  width: 5em;
+  height: 5em;
+  color: $font-color-RR;
+}
+

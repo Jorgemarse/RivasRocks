@@ -1,0 +1,18 @@
+<div class="activity">
+    <h1 class="activity__title">Lista de actividades</h1>
+    <button
+    class="activity__btn"
+    mat-raised-button
+    color="primary"
+    (click)="createActivity()">+ Actividad</button>
+    <app-activitycard
+      *ngFor="let activity of activities"
+      class="activity__card"
+      [showButtons]="true"
+      [title]="activity.title"
+      [location]="activity.location"
+      [activity_date]="activity.activity_date"
+      [publication_date]="activity.publication_date"
+      [Id]="activity.id"></app-activitycard>
+  </div>
+

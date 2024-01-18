@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="header__overlay" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+    <div class="header__logo">
+      <a href="index.html">
+        <div class="header__logo-company"></div>
+      </a>
+    </div>
+    <button class="header__button" (click)="setNavActive()">
+      <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </button>
+    <nav class="header__nav" [ngClass]="{ 'header__nav--active' : active }">
+      <div class="header__ul">
+        <li class="header__li"><button class="header__nav__button" (click)="home()">Inicio</button></li>
+        <li class="header__li"><button class="header__nav__button" (click)="about()">Nosotros</button></li>
+        <li class="header__li"><button class="header__nav__button" (click)="contact()">Contacto</button></li>
+      </div>
+      <!-- NO AUTH REQUIRED -->
+        <div class="header__login" *ngIf="showNoAuthSection">
+          <li class="header__li"><button class="header__nav__button" (click)="login()">Acceder</button></li>
+          <li class="header__li"><button class="header__nav__register" (click)="register()">Registrarse</button></li>
+        </div>
+        <!-- AUTH REQUIRED -->
+        <div class="header__login__auth" *ngIf="showAuthSectionAdmin">
+          <li class="header__li"><button class="header__nav__button" (click)="adminPosts()">Admin<br> Noticias</button></li>
+          <li class="header__li"><button class="header__nav__button" (click)="adminActivities()">Admin<br>Actividades</button></li>
+          <li class="header__li"><button class="header__nav__button" (click)="profile()">Perfil</button></li>
+          <li class="header__li"><button class="header__nav__button" (click)="logout()"><mat-icon class="header__icon">exit_to_app</mat-icon>Salir</button></li>
+        </div>
+        <div class="header__login__auth" *ngIf="showAuthSection">
+          <li class="header__li"><button class="header__nav__button" (click)="myactivities()">Mis Actividades</button></li>
+          <li class="header__li"><button class="header__nav__button" (click)="profile()">Perfil</button></li>
+          <li class="header__li"><button class="header__nav__button" (click)="logout()"><mat-icon class="header__icon">exit_to_app</mat-icon>Salir</button></li>
+        </div>        
+    </nav>
+</header>
+
+

@@ -1,0 +1,12 @@
+<mat-card class="mat-elevation-z4 card">
+      <mat-card-title class="card__title">{{ title }}</mat-card-title>
+      <mat-card-subtitle class="card__location"><mat-icon class="card__icon">room</mat-icon>{{ location }}</mat-card-subtitle>
+      <mat-card-subtitle class="card__date"><mat-icon class="card__icon">calendar_today</mat-icon>{{ activity_date | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
+      <mat-card-subtitle class="card__smalldescription">{{ small_description }}</mat-card-subtitle>
+      <mat-card-actions class="card__actions">
+      <button mat-button class="card__btn" (click)="viewActivity()">Más info</button>
+      <div *ngIf="showAuthSection">
+        <button mat-button class="card__btn" (click)="addUser()">Inscribirse</button> 
+      </div>
+      </mat-card-actions>
+</mat-card>

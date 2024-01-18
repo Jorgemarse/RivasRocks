@@ -1,0 +1,76 @@
+@import '../../../../styles.scss';
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    background-color: $bg-color-RR;
+    &__title{
+        margin:10px;
+        font-family: $font-Atma;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.2rem;
+        color: $font-color-RR;
+    }
+    &__icon{
+        font-size: 10px;
+        color: $font-color-RR;
+        height: fit-content;
+    }
+    &__location{
+        margin-top:10px;
+        font-family: $font-Atma;
+        font-weight: 500;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__date{
+        font-family: $font-Atma;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__smalldescription{
+        margin:10px;
+        font-family: $font-Atma;
+        font-weight: 400;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__participants{
+        margin:10px;
+        font-family: $font-Atma;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+    }
+    &__actions{
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+    }
+    &__btn{
+        margin-top: 5px;
+        width: 100%;
+        font-family: $font-Atma;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1rem;
+        color: $font-color-RR;
+        background-color: $button-color;
+        &:hover{
+            background-color: $font-color-RR;
+            color: $bg-color-RR;
+        }
+    }
+}

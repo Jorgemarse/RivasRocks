@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+.contact{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100%;
+
+    p{
+        font-family: $font-Atma;
+        color: $font-color-RR; 
+        font-weight: 600;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &__title{
+        margin: 20px;
+        font-family: $font-Atma;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.5rem;
+        color: $font-color-RR; 
+    }
+    &__card{
+        background-color: $bg-detail-color-RR;
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid $font-color-RR;
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    &__list{
+        list-style: none;
+        font-family: $font-Atma;
+        color: $font-color-RR;
+        li{
+            margin: 30px;
+        }
+        
+    }
+    &__icon{
+        font-size: 15px;
+        color: $font-color-RR;
+        height: fit-content;
+    }
+}

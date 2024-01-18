@@ -1,0 +1,33 @@
+@import '../../../../styles.scss';
+.home{
+  margin: auto;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  &__title{
+    margin: 20px;
+    font-family: $font-Atma;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $font-color-RR;
+  }
+  &__title::before, &__title::after{
+    content: '';
+    display: inline-block;
+    width: 20%;
+    height: 1px;
+    background-color: $font-color-RR;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+  &__grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__list{
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="activity">
+    <h1 class="activity__title">Mis actividades inscritas</h1>
+    <app-activitycard
+      *ngFor="let activity of activities"
+      class="activity__card"
+      [showButtons]="false"
+      [desincriptionbtn]="true"
+      [title]="activity.title"
+      [location]="activity.location"
+      [activity_date]="activity.activity_date"
+      [publication_date]="activity.publication_date"
+      [Id]="activity.id">
+    </app-activitycard>
+  </div>

@@ -1,0 +1,17 @@
+@import '../../../../styles.scss';
+.activity{
+  margin: auto;
+  align-items: center;
+  width: 75%;
+  &__title{
+    margin: 20px;
+    font-family: $font-Atma;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $font-color-RR;
+  }
+  &__card{
+    
+  }
+}

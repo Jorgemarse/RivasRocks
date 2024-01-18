@@ -1,0 +1,14 @@
+<div class="detail">
+    <div class="detail__overlay" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+    </div>
+    <article class="detail__article">
+        <h2 class="detail__title">{{ post.title }}</h2>
+        <p class="detail__description">
+            <span class="value">{{ post.description }}</span>
+        </p>
+        <p class="detail__date">
+            <span class="value">Fecha de publicación: {{ post.publication_date | date: 'dd/MM/yyyy' }}</span>
+        </p>
+    </article>
+</div>
